@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "762667163210",
+    "project_id": "flash-chat-e2977",
+    "storage_bucket": "flash-chat-e2977.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:762667163210:android:bf966cceb3763285e290b3",
+        "android_client_info": {
+          "package_name": "eka1984.com.flash_chat_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtlosMWuRikdWzfHvUTZ9fgS-cSjxnj98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
