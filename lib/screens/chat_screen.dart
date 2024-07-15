@@ -86,17 +86,22 @@ class _ChatScreenState extends State<ChatScreen> {
                     );
                   }
                     final messages = snapshot.data!.docs;
-                    List<Text> messageWidgets = [];
+                    List<MessageBubble> messageBubbles = [];
                     for (var message in messages) {
                       final messageData = message.data() as Map<String, dynamic>;
                       final messageText = messageData['text'];
                       final messageSender = messageData['sender'];
 
-                      final messageWidget = Text('$messageText from $messageSender');
-                      messageWidgets.add(messageWidget);
+                      final messageBubble = MessageBubble(
+                          sender: messageSender,
+                          text: messageText);
+                      messageBubbles.add(messageBubble);
                     }
-                    return Column(
-                      children: messageWidgets,
+                    return Expanded(
+                      child: ListView(
+                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+                        children: messageBubbles,
+                      ),
                     );
                 }),
             Container(
@@ -136,3 +141,55 @@ class _ChatScreenState extends State<ChatScreen> {
     );
   }
 }
+
+class MessagesStream extends StatelessWidget {
+  const MessagesStream({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
+
+class MessageBubble extends StatelessWidget {
+  MessageBubble({required this.sender,required this.text});
+
+  final String sender;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(10.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.end,
+        children: [
+          Text(
+              sender,
+            style: TextStyle(
+              fontSize: 12,
+              color: Colors.black54,
+            ),
+          ),
+          Material(
+            borderRadius: BorderRadius.circular(30),
+            elevation: 5,
+            color: Colors.lightBlueAccent,
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              child: Text(
+                  text,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
