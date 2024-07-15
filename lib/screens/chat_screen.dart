@@ -98,16 +98,6 @@ class _ChatScreenState extends State<ChatScreen> {
                     return Column(
                       children: messageWidgets,
                     );
-
-                  else if (snapshot.hasError) {
-                    return Center(
-                      child: Text('Error: ${snapshot.error}'),
-                    );
-                  } else {
-                    return Center(
-                      child: CircularProgressIndicator(),
-                    );
-                  }
                 }),
             Container(
               decoration: kMessageContainerDecoration,
