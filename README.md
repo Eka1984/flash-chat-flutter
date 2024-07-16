@@ -1,16 +1,19 @@
-# flash_chat_flutter
+# Flash Chat App
 
-A new Flutter project.
+Flash Chat is a simple chat application built as part of the Udemy course "The Complete Flutter Development Bootcamp with Dart." This app demonstrates the use of various Flutter features including animations, Firebase integration, and principles of Object-Oriented Programming (OOP).
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
+Flash Chat provides a seamless chat experience with features such as user authentication and real-time messaging. The app consists of a welcome screen, login and registration screens, and a chat screen where users can communicate in real-time.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **User Authentication**: Secure login and registration using Firebase Authentication.
+- **Real-Time Messaging**: Send and receive messages instantly using Cloud Firestore.
+- **OOP Principles**: Implementation of Object-Oriented Programming concepts.
+- **Animations**: Smooth transitions and animations for an enhanced user experience.
+- **Streams and StreamBuilder**: Efficiently handle real-time data using Streams and StreamBuilder.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Demo
+
+![Flash Chat Demo](demo/demo.gif)

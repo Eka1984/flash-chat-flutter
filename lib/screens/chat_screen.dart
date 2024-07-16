@@ -46,14 +46,21 @@ class _ChatScreenState extends State<ChatScreen> {
         leading: null,
         actions: <Widget>[
           IconButton(
-              icon: Icon(Icons.close),
+              icon: Icon(Icons.close, color: Colors.white,),
               onPressed: () {
                 _auth.signOut();
                 Navigator.pop(context);
               }),
         ],
-        title: Text('⚡️Chat'),
+        title: Text('⚡️Chat',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
         backgroundColor: Colors.lightBlueAccent,
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
       ),
       body: SafeArea(
         child: Column(
